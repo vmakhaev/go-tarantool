@@ -310,10 +310,10 @@ func (s *Slave) Next() (*Packet, error) {
 	// Because of exported Next field can't implements needed interface itself.
 
 	p, err := s.next()
-	if err != nil {
-		// don't iterate after error has been occurred
-		s.next = s.nextEOF
-	}
+	// if err != nil {
+	// 	// don't iterate after error has been occurred
+	// 	s.next = s.nextEOF
+	// }
 	return p, err
 }
 
